@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useStore } from "@/lib/store";
 import logo from "@/assets/logo.png";
-import { GraduationCap, Sparkles, Target, Rocket } from "lucide-react";
+import { GraduationCap, Sparkles, Target, Rocket, ArrowLeft, Home } from "lucide-react";
 
 export default function Login() {
   const { login } = useStore();
@@ -43,16 +43,14 @@ export default function Login() {
         {/* CONTENT */}
         <div className="relative z-10">
 
-          <Link to="/" className="flex items-center gap-3">
-
-            <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 transition group-hover:bg-white/20">
               <img src={logo} alt="logo" className="w-8 h-8 object-contain brightness-0 invert" />
             </div>
 
             <span className="text-white font-semibold text-lg tracking-tight drop-shadow-sm">
               Impulsa+
             </span>
-
           </Link>
 
         </div>
@@ -93,8 +91,16 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="relative z-10 text-xs text-white/80 drop-shadow-sm">
-          © 2026 Impulsa+
+        {/* BOTÓN IR AL INICIO EN LA PARTE INFERIOR */}
+        <div className="relative z-10 flex items-center justify-between">
+          <span className="text-xs text-white/80 drop-shadow-sm">© 2026 Impulsa+</span>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/20 text-white text-sm font-medium hover:bg-white/30 transition-all duration-300 hover:scale-105"
+          >
+            <Home className="w-4 h-4" />
+            Ir al inicio
+          </Link>
         </div>
 
       </div>
@@ -104,15 +110,21 @@ export default function Login() {
 
         <div className="w-full max-w-md">
 
-          <h1 className="text-3xl font-bold text-slate-900">
-            Iniciar sesión
-          </h1>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#facc15]/20 to-[#2563eb]/20 flex items-center justify-center border border-slate-200 shadow-sm">
+              <img src={logo} alt="logo" className="w-8 h-8 object-contain" />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-slate-900">
+                Iniciar sesión
+              </h1>
+              <p className="text-sm text-slate-500">
+                Accede a tu plataforma de aprendizaje
+              </p>
+            </div>
+          </div>
 
-          <p className="mt-2 text-sm text-slate-500">
-            Accede a tu plataforma de aprendizaje
-          </p>
-
-          <form onSubmit={onSubmit} className="mt-8 space-y-4">
+          <form onSubmit={onSubmit} className="mt-6 space-y-4">
 
             <input
               type="email"
@@ -122,7 +134,7 @@ export default function Login() {
                 setError("");
               }}
               placeholder="Correo electrónico"
-              className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-white shadow-sm outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition"
+              className="w-full h-12 px-4 rounded-2xl border border-slate-200 bg-white shadow-sm outline-none focus:ring-2 focus:ring-[#facc15]/30 focus:border-[#facc15] transition"
               required
             />
 
@@ -134,19 +146,19 @@ export default function Login() {
                 setError("");
               }}
               placeholder="Contraseña"
-              className="w-full h-12 px-4 rounded-xl border border-slate-200 bg-white shadow-sm outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition"
+              className="w-full h-12 px-4 rounded-2xl border border-slate-200 bg-white shadow-sm outline-none focus:ring-2 focus:ring-[#facc15]/30 focus:border-[#facc15] transition"
               required
             />
 
             {error && (
-              <div className="text-sm text-red-600 bg-red-50 border border-red-100 p-3 rounded-xl">
+              <div className="text-sm text-red-600 bg-red-50 border border-red-200 p-3.5 rounded-2xl">
                 {error}
               </div>
             )}
 
             <button
               type="submit"
-              className="w-full h-12 rounded-xl bg-gradient-to-r from-primary to-[#1ea7ff] text-white font-semibold shadow-md hover:opacity-95 transition"
+              className="w-full h-12 rounded-2xl bg-gradient-to-r from-[#facc15]/30 to-[#2563eb]/30 text-[#2563eb] font-semibold shadow-sm hover:shadow-md transition-all border border-[#2563eb]/20 hover:from-[#facc15]/40 hover:to-[#2563eb]/40"
             >
               Iniciar sesión
             </button>
@@ -155,7 +167,7 @@ export default function Login() {
 
           <p className="mt-6 text-sm text-center text-slate-500">
             ¿No tienes cuenta?{" "}
-            <Link to="/register" className="text-primary font-medium hover:underline">
+            <Link to="/register" className="text-[#2563eb] font-medium hover:underline">
               Crear cuenta
             </Link>
           </p>

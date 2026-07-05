@@ -47,7 +47,7 @@ export function FeaturedCourses({ featured }: FeaturedCoursesProps) {
                                 {Array.from({ length: 5 }).map((_, index) => (
                                     <Star
                                         key={index}
-                                        className={`h-4 w-4 ${index < Math.round(course.rating) ? "fill-warning text-warning" : "text-slate-300"}`}
+                                        className={`h-4 w-4 ${index < Math.round(Number(course.rating ?? 0)) ? "fill-warning text-warning" : "text-slate-300"}`}
                                     />
                                 ))}
                             </div>

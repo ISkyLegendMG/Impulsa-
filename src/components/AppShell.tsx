@@ -18,20 +18,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="flex min-h-screen w-full bg-background">
+    <div className="flex min-h-screen w-full bg-slate-50">
       <AppShellSidebar
         open={open}
         setOpen={setOpen}
         currentUser={currentUser}
         onLogout={handleLogout}
       />
-
-      {open && (
-        <div
-          className="fixed inset-0 z-30 bg-black/40 lg:hidden"
-          onClick={() => setOpen(false)}
-        />
-      )}
 
       <div className="flex min-w-0 flex-1 flex-col">
         <AppShellHeader
