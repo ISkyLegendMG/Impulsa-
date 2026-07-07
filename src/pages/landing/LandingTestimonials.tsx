@@ -9,7 +9,7 @@ const TESTIMONIALS = [
     {
         name: "María López",
         role: "Diseñadora UX",
-        text: "Conseguí mi certificado en 6 semanas. La plataforma es clara y muy fácil de usar.",
+        text: "Las lecciones son claras y los instructores están siempre disponibles para resolver dudas. ¡Me encanta la comunidad!",
     },
     {
         name: "Andrés Pérez",

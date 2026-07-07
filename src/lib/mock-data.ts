@@ -415,9 +415,6 @@ export const faqs: Faq[] = [
   { q: "¿Puedo descargar los videos?", a: "Los videos se reproducen en línea para garantizar la calidad y evitar descargas no autorizadas. Pero tendrás acceso ilimitado mientras estés suscrito." },
 
   // ---- Certificados y finalización ----
-  { q: "¿Cómo obtengo mi certificado?", a: "Al completar el 100% de las lecciones y aprobar la evaluación final, el certificado estará disponible para descargar en tu dashboard." },
-  { q: "¿El certificado tiene validez oficial?", a: "Nuestros certificados son avalados por nuestra institución y cuentan con código QR de verificación. Muchos empleadores los reconocen." },
-  { q: "¿Puedo obtener certificado de un curso que compré hace tiempo?", a: "Sí, mientras tengas acceso al curso (si no ha expirado), puedes completarlo y obtener tu certificado en cualquier momento." },
 
   // ---- Políticas y soporte ----
   { q: "¿Puedo cancelar mi compra?", a: "Tienes 7 días desde la compra para solicitar un reembolso si no has avanzado más del 20% del curso. Consulta nuestra política de reembolso." },

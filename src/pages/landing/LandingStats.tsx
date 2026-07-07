@@ -57,7 +57,7 @@ export function LandingStats() {
                 {[
                     { label: "Estudiantes activos", value: "1,830", trend: "+12%", icon: Users },
                     { label: "Cursos publicados", value: "58", trend: "+6", icon: BookOpen },
-                    { label: "Certificados emitidos", value: "742", trend: "+24%", icon: Award },
+                    { label: "Personal calificado", value: "20", trend: "+24%", icon: Award },
                     { label: "Tasa de finalización", value: "82%", trend: "+4%", icon: CheckCircle2 },
                 ].map((metric) => (
                     <div key={metric.label} className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl">
